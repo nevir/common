@@ -1,0 +1,10 @@
+{
+  "extends": "./base",
+  // See https://www.typescriptlang.org/tsconfig
+  "compilerOptions": {
+    // Module
+
+    // We are still in CommonJS land for now.
+    "module": "commonjs",
+  },
+}

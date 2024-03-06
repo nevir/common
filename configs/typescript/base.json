@@ -1,0 +1,91 @@
+{
+  // See https://www.typescriptlang.org/tsconfig
+  "compilerOptions": {
+    // Type Checking
+
+    // We want the strictest possible type checking.
+    "strict": true,
+
+    // Keep that clutter away!
+    "allowUnreachableCode": false,
+
+    // Keep that clutter away!
+    "allowUnusedLabels": false,
+
+    // This avoids confusion where a key may be `in` an object, but the value of
+    // that key is `undefined`.
+    "exactOptionalPropertyTypes": true,
+
+    // We generally don't use switches, but when we do, let's make sure we're
+    // not doing confusing things.
+    "noFallthroughCasesInSwitch": true,
+
+    // Helps to keep class hierarchies in sync.
+    "noImplicitOverride": true,
+
+    // Ensure that functions always return something in every branch.
+    "noImplicitReturns": true,
+
+    // Be consistent about known properties vs unknown properties
+    "noPropertyAccessFromIndexSignature": true,
+
+    // In most cases, any index signature does not guarantee the presense of ALL
+    // possible keys we use to look up values.
+    "noUncheckedIndexedAccess": true,
+
+    // Keep that clutter away!
+    "noUnusedLocals": true,
+
+    // Keep that clutter away!
+    "noUnusedParameters": true,
+
+    // Modules
+
+    // For now, we stick to classic Node module resolution behavior; we're
+    // waiting for ESM on Node to stabilize in the community.
+    "moduleResolution": "node",
+
+    // Emit
+
+    // We do not emit any source by default.
+    //
+    // In Node projects: we prefer to use tools like swc-node / ts-node to run
+    // (and watch) our dev server.
+    //
+    // In web projects: we use servers like vite / webpack to build (and watch)
+    // our React code.
+    //
+    // The only time we actually build code is during our CI process (and we can
+    // pass --noEmit=false for that).
+    //
+    // This avoids a lot of confusion where tools like that will prefer built
+    // .js files if they exist, and may pick up stale code.
+    "noEmit": true,
+
+    // Interop Constraints
+
+    // Support legacy CommonJS packages that export a single value, that is not
+    // declared a default export.
+    "allowSyntheticDefaultImports": true,
+
+    // Support legacy CommonJS packages that either export a single value (to be
+    // treated like default), or an object (to be treated like a module).
+    "esModuleInterop": true,
+
+    // Language & Environment
+
+    // We emit source that targets features provided by the Node version we use.
+    //
+    // Note that this also means that web based projects must polyfill up to
+    // that level of feature support.
+    //
+    // The https://github.com/tsconfig/bases project can be helpful to determine
+    // which ES version to target when upgrading to a new major Node version.
+    "target": "ES2022",
+
+    // For features that are not natively supported by our Node version, we
+    // import prefer to helpers from tslib (rather than compile them into each
+    // file); which minimizes the size of compiled source.
+    "importHelpers": true,
+  },
+}

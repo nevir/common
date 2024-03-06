@@ -1,0 +1,68 @@
+/**
+ * Disable all rules that TypeScript implements natively.
+ *
+ * @type {import('eslint').Linter.RulesRecord}
+ */
+module.exports = {
+  '@typescript-eslint/no-dupe-class-members': 'off',
+  '@typescript-eslint/no-invalid-this': 'off',
+  '@typescript-eslint/no-redeclare': 'off',
+  '@typescript-eslint/no-unused-vars': 'off',
+  '@typescript-eslint/no-use-before-define': 'off',
+  'array-callback-return': 'off',
+  'consistent-return': 'off', // noImplicitReturns: true
+  'constructor-super': 'off',
+  'getter-return': 'off',
+  'import/default': 'off',
+  'import/export': 'off',
+  'import/named': 'off',
+  'import/namespace': 'off',
+  'import/no-amd': 'off',
+  'import/no-deprecated': 'off',
+  'import/no-import-module-exports': 'off',
+  'import/no-named-as-default-member': 'error',
+  'import/no-nodejs-modules': 'off',
+  'import/no-unresolved': 'off',
+  'no-class-assign': 'off',
+  'no-const-assign': 'off',
+  'no-constructor-return': 'off',
+  'no-delete-var': 'off', // strict: true
+  'no-dupe-args': 'off',
+  'no-dupe-keys': 'off',
+  'no-fallthrough': 'off', // noFallthroughCasesInSwitch: true
+  'no-func-assign': 'off',
+  'no-global-assign': 'off',
+  'no-import-assign': 'off',
+  'no-iterator': 'off',
+  'no-new-native-nonconstructor': 'off',
+  'no-new-symbol': 'off',
+  'no-obj-calls': 'off',
+  'no-proto': 'off',
+  'no-setter-return': 'off',
+  'no-this-before-super': 'off',
+  'no-undef': 'off',
+  'no-unreachable': 'off', // allowUnreachableCode: false
+  'no-unsafe-negation': 'off',
+  'no-unsafe-optional-chaining': 'off',
+  'no-unused-private-class-members': 'off',
+  'no-with': 'off', // strict: true
+  'react/jsx-filename-extension': 'off',
+  'react/jsx-no-duplicate-props': 'off',
+  'react/jsx-no-undef': 'off',
+  'react/jsx-uses-vars': 'off',
+  'react/no-deprecated': 'off',
+  'react/no-find-dom-node': 'off',
+  'react/no-namespace': 'off',
+  'react/no-render-return-value': 'off',
+  'react/no-this-in-sfc': 'off',
+  'react/no-unescaped-entities': 'off',
+  'react/no-unknown-property': 'off',
+  'react/prop-types': 'off',
+  'react/require-default-props': 'off',
+  'react/require-render-return': 'off',
+  'react/state-in-constructor': 'off',
+  'react/style-prop-object': 'off',
+  'unused-imports/no-unused-vars': 'off',
+  'use-isnan': 'error',
+  'valid-typeof': 'off',
+};

@@ -1,0 +1,13 @@
+{
+  "extends": "./base",
+  // See https://www.typescriptlang.org/tsconfig
+  "compilerOptions": {
+    // Language & Environment
+
+    // All of our web projects are React-based.
+    "jsx": "react-jsx",
+
+    // We use Emotion as our styling mechanism.
+    "jsxImportSource": "@emotion/react",
+  },
+}
